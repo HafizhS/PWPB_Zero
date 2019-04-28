@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <html>
 <head>
     <title>Zero | The best site ever exist</title>
@@ -8,28 +11,6 @@
     <link rel="icon" href="image/ZeroLogo2.png">
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <div class="container d-flex justify-content-between">
-                    <a href="image/ZeroLogo2.png"><img src="image/ZeroLogo2.png" height="40"/></a>
-                    <a class="navbar-brand" href="">Zero</a>
-                </div>
-            </div>
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item"><a class="nav-link active" href="">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{url('browse')}}">Browse</a></li>
-            </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item mr-auto"><a class="nav-link" href="{{url('login')}}">Login</a></li>
-                <li class="nav-item mr-auto"><a class="nav-link" href="">Register</a></li>
-                {{--<li class="nav-item mr-auto"><a class="nav-link text-hide" href="">Logout</a></li>--}}
-                {{--<li class="nav-item mr-auto"><a class="nav-link text-hide" href="">PROFILE</a></li>--}}
-            </ul>
-        </div>
-    </nav>
-</header>
 <main role="main" id="particles-js">
     <section class="jumbotron text-center">
         <div class="container m-auto">
@@ -127,3 +108,4 @@
 </footer>
 </body>
 </html>
+@endsection

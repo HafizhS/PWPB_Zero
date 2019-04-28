@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
 Route::get('/browse', function () {
@@ -24,3 +24,10 @@ Route::get('/login', function () {
 });
 
 
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/Anime', 'AnimeController@index')->name('Anime');

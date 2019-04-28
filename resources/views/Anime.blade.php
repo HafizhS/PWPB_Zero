@@ -37,7 +37,7 @@
 		</tr>
         @foreach ($anime as $row)
         <tr>
-            <td> {{ isset($i) > ++$i : $i = 1 }} </td>
+            <td> {{ isset($i) ? ++$i : $i = 1 }} </td>
             <td> {{ $row->id_anime }} </td>
             <td> {{ $row->judul }} </td>
             <td> {{ $row->episode }} </td>
@@ -49,6 +49,7 @@
             <td> {{ $row->score }} </td>
             <td> {{ $row->credit }} </td>
 		</tr>
+		@endforeach
 	</table>
 		</div>
 	</body>
