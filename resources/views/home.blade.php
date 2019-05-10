@@ -1,19 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<html>
-<head>
-    <title>Zero | The best site ever exist</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
-    <link rel="stylesheet" type="text/css" href="style/style1.css">
-    <link rel="icon" href="image/ZeroLogo2.png">
-</head>
-<body>
-<main role="main" id="particles-js">
+<main role="main">
     <section class="jumbotron text-center">
-        <div class="container m-auto">
+        <div class="container">
             <h2 class="jumbotron-heading display-3">The Zero</h2>
             <p class="lead text-muted">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -25,12 +15,6 @@
             </p>
         </div>
     </section>
-    <section class="container m-auto text-center p-3" style="background-color: #95a5a6">
-        <div class="display-3">
-            Banner Iklan
-        </div>
-    </section>
-    <br>
     <h3 class="text-center display-4">Populer Sekarang!</h3>
     <div class="album py-p bg-light">
         <hr class="my-2">
@@ -39,7 +23,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src="image/tate-no-yuusha3.png">
+                        <img class="card-img-top" src="tate-no-yuusha2.jpg">
                         <div class="card-body">
                             <h4 class="card-title text-center">Tate no yuusha</h4>
                             <p class="card-text">
@@ -60,7 +44,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src="image/boruto-naruto-next-generations1.jpg">
+                        <img class="card-img-top" src="boruto-naruto-next-generations1.jpg">
                         <div class="card-body">
                             <h4 class="card-title text-center">
                                 Boruto : The Next Generation</h4>
@@ -79,7 +63,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src="image/one-punch-man-s2-1.jpg">
+                        <img class="card-img-top" src="one-punch-man-s2-1.jpg">
                         <div class="card-body">
                             <h4 class="card-title text-center">
                                 One Punch Man Season 2</h4>
@@ -100,12 +84,4 @@
     </div>
 </main>
 
-<br>
-<footer>
-    <div class="container" style="background-color: lightgray">
-
-    </div>
-</footer>
-</body>
-</html>
 @endsection

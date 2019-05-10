@@ -13,6 +13,7 @@
     box-sizing: border-box;
     padding: 10px;
     font-size: 16px;
+    opacity: 1;
 }
 
 .shadow-lg {
@@ -21,4 +22,21 @@
 
 .login-container {
     width: 30%;
+}
+.card {
+    background-color: rgba(0, 0, 255, 0.489);
+    color:azure;
+    width: 600px;
+}
+body{
+    background: url(../image/Background/gambar.jpg);
+    background-size: 100%;
+}
+.navbar-laravel{
+    background-color: rgba(0, 0, 255, 0.489);
+    color: azure;
+    margin-bottom: 80px;
+}
+.card-header{
+    /* font-size: 10px; */
 }

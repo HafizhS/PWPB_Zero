@@ -11,23 +11,35 @@
 |
 */
 
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-Route::get('/browse', function () {
-    return view('browse');
+Route::get('/admin', function () {
+    return view('admin');
 });
 
-Route::get('/login', function () {
-    return view('login');
+Route::get('/dataUser', function () {
+    return view('dataUser');
 });
 
+Route::get('/dataAnime', function () {
+    return view('dataAnime');
+});
 
+Auth::routes();
 
+Route::get('/home', 'HomeController@index');
+Route::get('/dataAnime', 'AnimeController@index');
+Route::get('/tambahdataAnime', 'AnimeController@create');
+Route::post('/dataAnime', 'AnimeController@store');
+Route::get('/dataAnime/{id_anime}/edit', 'AnimeController@edit');
+Route::patch('/dataAnime/{id_anime}', 'AnimeController@update');
+Route::delete('/dataAnime/{id_anime}', 'AnimeController@destroy');
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/Anime', 'AnimeController@index')->name('Anime');
