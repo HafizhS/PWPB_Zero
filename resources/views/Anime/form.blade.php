@@ -66,7 +66,7 @@
                 </div>
       </div>
 		<div class = "form-group">
-			<input type = "submit" class = "btn btn-primary" value = "Simpan">
+			<input type = "submit" class = "btn btn-primary" value = "SAVE">
 		</div>
 	</body>
 </html>
