@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Faker\Provider\File;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AnimeController extends Controller
 {
@@ -34,6 +36,7 @@ class AnimeController extends Controller
             'durasi'=>'required|string',
             'genre'=>'required|string',
             'score'=>'required|string',
+//            'image_url'=>'nullable|string'
 		];
 		$this->validate($request, $rule);
 		
@@ -42,8 +45,11 @@ class AnimeController extends Controller
 		// $status = \DB::table('t_anime')->insert($input);
 		
 		// $status = \App\anime::create($input);
+        $image = $request->file('cover');
+        $extension = $image->getClientOriginalExtension();
+        Storage::disk('public')->put($image->getFilename().'.'.$extension, \Illuminate\Support\Facades\File::get($image));
 		$anime = new \App\Anime;
-		$anime->id_anime = $input['id_anime'];
+//		$anime->id_anime = $input['id_anime'];
 		$anime->judul = $input['judul'];
 		$anime->episode = $input['episode'];
         $anime->musim_rilis = $input['musim_rilis'];
@@ -52,6 +58,7 @@ class AnimeController extends Controller
         $anime->durasi = $input['durasi'];
         $anime->genre = $input['genre'];
         $anime->score = $input['score'];
+        $anime->image_url = $image->getFilename().'.'.$extension;
 		$status = $anime->save();
 		
 		if ($status) {
