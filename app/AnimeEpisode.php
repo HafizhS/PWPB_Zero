@@ -9,6 +9,6 @@ class AnimeEpisode extends Model
     public $table = 'anime_episode';
 
     protected $fillable = [
-        'id_anime,url,release_date'
+        'id_anime','episode ','url'
     ];
 }

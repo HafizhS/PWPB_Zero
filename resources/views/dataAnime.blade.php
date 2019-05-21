@@ -133,7 +133,7 @@
                                 class="fa-angle-right fa right-arrow text-right"></span> </a>
                     <ul class="nav nav-list tree">
                         <li><a href="{{ url('/dataAnime') }}">Data Anime </a></li>
-
+                        <li><a href=""></a>Data Episode Anime</li>
                     </ul>
                 </li>
         </div>
@@ -177,9 +177,9 @@
                                         <th>Durasi</th>
                                         <th>Genre</th>
                                         <th>Score</th>
-                                        <th colspan="2" width="auto">
+                                        <th colspan="3" width="auto">
                                             <center>Aksi</center>
-                                        <th>
+                                        </th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -188,7 +188,8 @@
                                             <td> {{ isset($i) ? ++$i : $i = 1 }} </td>
                                             <td class="py-1">
                                                 @if($row->image_url)
-                                                    <img src="{{ url('uploads/'. $row->image_url) }}" alt="image"/>
+                                                    <img src="{{ url('uploads/'. $row->image_url) }}"
+                                                         class="img-thumbnail" alt="image" width="225px"/>
                                                 @else
                                                     <img src="{{ url('image/Anime/default.png') }}" alt="image"/>
                                                 @endif
@@ -211,6 +212,11 @@
                                                     @method('DELETE')
                                                     @csrf
                                                     <button class="btn btn-danger" type="submit">Delete</button>
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-primary"
+                                                   href="{{ url('dataAnime/' . $row->id_anime . '/episode') }}">Episode</a>
                                             </td>
                                         </tr>
                                     @endforeach

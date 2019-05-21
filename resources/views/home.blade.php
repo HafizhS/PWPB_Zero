@@ -23,7 +23,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src="tate-no-yuusha2.jpg">
+                        <img class="card-img-top" src="{{public_path().'\uploads\tate-no-yuusha1.jpg'}}">
                         <div class="card-body">
                             <h4 class="card-title text-center">Tate no yuusha</h4>
                             <p class="card-text">

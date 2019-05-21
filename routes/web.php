@@ -30,16 +30,26 @@ Route::get('/dataAnime', function () {
 });
 
 Auth::routes();
+//Route::resource('anime','AnimeController');
+
+Route::get('/browse', 'BrowseController@index')->name('browse');
+Route::get('/browse/search','BrowseController@search')->name('browse.search');
 
 Route::get('/home', 'HomeController@index');
-Route::get('/dataAnime', 'AnimeController@index');
 Route::get('/tambahdataAnime', 'AnimeController@create');
-Route::post('/dataAnime', 'AnimeController@store');
-Route::get('/dataAnime/{id_anime}/edit', 'AnimeController@edit');
-Route::patch('/dataAnime/{id_anime}', 'AnimeController@update');
-Route::delete('/dataAnime/{id_anime}', 'AnimeController@destroy');
-
+Route::get('/dataAnime', 'AnimeController@index')->name('dataAnime.index');
+Route::post('/dataAnime', 'AnimeController@store')->name('dataAnime.store');
+Route::get('/dataAnime/{id_anime}/edit', 'AnimeController@edit')->name('dataAnime.edit');
+Route::patch('/dataAnime/{id_anime}','AnimeController@update')->name('dataAnime.update');
+Route::delete('/dataAnime/{id_anime}', 'AnimeController@destroy')->name('dataAnime.destroy');
+Route::get('/dataAnime/{id_anime}/episode', 'AnimeController@indexEpisode')->name('dataAnime.indexEpisode');
+Route::post('/dataAnime/{id_anime}/episode', 'AnimeController@storeEpisode')->name('dataAnime.storeEpisode');
+Route::get('/anime/{id_anime}', 'AnimeController@detail')->name('anime.detail');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+//TODO::
+//fix tambah

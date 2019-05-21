@@ -34,7 +34,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li>
+                            <a class="text-white" href="{{url('/browse')}}">Browse</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

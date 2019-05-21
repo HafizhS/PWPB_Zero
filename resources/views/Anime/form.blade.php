@@ -31,7 +31,7 @@
         <div class="form-group">
             <label for="id_anime">ID Anime</label>
             <input type="text" class="form-control" name="id_anime" value="{{ old('id_anime', @$anime->id_anime) }}"
-                   placeholder="Masukkan ID">
+                   placeholder="Masukkan ID" readonly>
             <label for="judul">Judul Anime</label>
             <input type="text" class="form-control" name="judul" value="{{ old('judul', @$anime->judul) }}"
                    placeholder="Masukkan Judul">
